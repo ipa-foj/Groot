@@ -98,6 +98,10 @@ MainWindow::MainWindow(GraphicMode initial_mode, QWidget *parent) :
     addModelToTree( ForceSuccess::NodeModel() );
     addModelToTree( ForceFailure::NodeModel() );
 
+	// ------- custom Decorators -------
+	_model_registry->registerModel<TerminalInputNode>("Decorator");
+	addModelToTree( TerminalInputNode::NodeModel() );
+
     _model_registry->registerModel<ActionSuccess>("Action");
     _model_registry->registerModel<ActionFailure>("Action");
     _model_registry->registerModel<ActionSetBlackboard>("Action");

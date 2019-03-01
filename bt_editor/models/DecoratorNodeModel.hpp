@@ -147,6 +147,21 @@ public:
     std::pair<QString, QColor> caption() const override  { return { Name(), "#ff2222"}; }
 };
 
+// ------- custom Decorators -------
+class TerminalInputNode : public DecoratorNodeModel
+{
+public:
+	TerminalInputNode();
+
+	static const char* Name() {  return "TerminalInputNode"; }
+
+	static TreeNodeModel NodeModel() {
+		return { Name(), NodeType::DECORATOR, { {"display_text", "Text to print before input"}, {"output_variable", ""} } };
+	}
+
+	std::pair<QString, QColor> caption() const override
+	{ return { Name(), QtNodes::NodeStyle().FontColor}; }
+};
 
 
 #endif // DECORATORNODEMODEL_HPP

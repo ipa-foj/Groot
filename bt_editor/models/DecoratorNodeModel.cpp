@@ -56,3 +56,9 @@ ForceFailure::ForceFailure():
 {
     _line_edit_name->setHidden(true);
 }
+
+// ------- custom Decorators -------
+TerminalInputNode::TerminalInputNode():
+	DecoratorNodeModel( NodeModel() )
+{
+}
