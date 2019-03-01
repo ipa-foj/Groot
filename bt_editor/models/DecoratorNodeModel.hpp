@@ -163,5 +163,20 @@ public:
 	{ return { Name(), QtNodes::NodeStyle().FontColor}; }
 };
 
+class ServiceInputNode : public DecoratorNodeModel
+{
+public:
+	ServiceInputNode();
+
+	static const char* Name() {  return "ServiceInputNode"; }
+
+	static TreeNodeModel NodeModel() {
+		return { Name(), NodeType::DECORATOR, { {"display_text", "Text to print before input"}, {"output_variable", ""} } };
+	}
+
+	std::pair<QString, QColor> caption() const override
+	{ return { Name(), QtNodes::NodeStyle().FontColor}; }
+};
+
 
 #endif // DECORATORNODEMODEL_HPP

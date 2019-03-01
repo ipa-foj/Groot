@@ -101,6 +101,8 @@ MainWindow::MainWindow(GraphicMode initial_mode, QWidget *parent) :
 	// ------- custom Decorators -------
 	_model_registry->registerModel<TerminalInputNode>("Decorator");
 	addModelToTree( TerminalInputNode::NodeModel() );
+	_model_registry->registerModel<ServiceInputNode>("Decorator");
+	addModelToTree( ServiceInputNode::NodeModel() );
 
     _model_registry->registerModel<ActionSuccess>("Action");
     _model_registry->registerModel<ActionFailure>("Action");

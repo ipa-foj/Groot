@@ -62,3 +62,8 @@ TerminalInputNode::TerminalInputNode():
 	DecoratorNodeModel( NodeModel() )
 {
 }
+
+ServiceInputNode::ServiceInputNode():
+	DecoratorNodeModel( NodeModel() )
+{
+}
