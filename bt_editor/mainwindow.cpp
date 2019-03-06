@@ -103,6 +103,8 @@ MainWindow::MainWindow(GraphicMode initial_mode, QWidget *parent) :
 	addModelToTree( TerminalInputNode::NodeModel() );
 	_model_registry->registerModel<ServiceInputNode>("Decorator");
 	addModelToTree( ServiceInputNode::NodeModel() );
+	_model_registry->registerModel<TreeStatePublisher>("Decorator");
+	addModelToTree( TreeStatePublisher::NodeModel() );
 
     _model_registry->registerModel<ActionSuccess>("Action");
     _model_registry->registerModel<ActionFailure>("Action");

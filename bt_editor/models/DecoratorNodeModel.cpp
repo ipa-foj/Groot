@@ -67,3 +67,8 @@ ServiceInputNode::ServiceInputNode():
 	DecoratorNodeModel( NodeModel() )
 {
 }
+
+TreeStatePublisher::TreeStatePublisher():
+	DecoratorNodeModel (NodeModel())
+{
+}

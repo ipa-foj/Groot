@@ -178,5 +178,19 @@ public:
 	{ return { Name(), QtNodes::NodeStyle().FontColor}; }
 };
 
+class TreeStatePublisher : public DecoratorNodeModel
+{
+public:
+	TreeStatePublisher();
+
+	static const char* Name() {  return "TreeStatePublisher"; }
+
+	static TreeNodeModel NodeModel() {
+		return { Name(), NodeType::DECORATOR, { {"subroutine", "name of the subroutine"} } };
+	}
+
+	std::pair<QString, QColor> caption() const override
+	{ return { Name(), QtNodes::NodeStyle().FontColor}; }
+};
 
 #endif // DECORATORNODEMODEL_HPP
